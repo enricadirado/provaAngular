@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RootComponent implements OnInit {
 
+  title: string = 'Temperature in Angular ' + VERSION.major;
+  
   constructor() { }
 
   ngOnInit() {
