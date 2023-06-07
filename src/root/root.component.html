@@ -5,5 +5,5 @@
   <li *ngFor="let city of cities">
     <button (click)="seleziona(city)">{{city}}</button>
   </li>
-  <app-notifica> </app-notifica>
+  <app-notifica [selezione]="selezione"> </app-notifica>
 </ul>

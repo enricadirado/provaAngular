@@ -9,7 +9,7 @@ import { NotificaComponent } from './notifica/notifica.component';
   selector: 'app-root',
   templateUrl: './root.component.html',
   styleUrls: ['./root.component.css'],
-  imports: [CommonModule],
+  imports: [ CommonModule, NotificaComponent ],
   providers: [WeatherService],
   standalone: true,
 })
