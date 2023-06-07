@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TempCity } from '../temp-city';
 
 @Component({
   selector: 'app-notifica',
@@ -9,6 +10,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
 })
 export class NotificaComponent implements OnInit {
+  @Input() selezione: TempCity;
   constructor() {}
   ngOnInit() {}
   clean() {
