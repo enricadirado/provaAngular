@@ -4,6 +4,7 @@ import { TempCity } from './temp-city';
 import { WeatherService } from './weather.service';
 import { AjaxResponse } from 'rxjs/ajax';
 import { NotificaComponent } from './notifica/notifica.component';
+import { NewcityComponent } from './newcity/newcity.component';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,9 @@ export class RootComponent implements OnInit {
     });
   }
   selezione: TempCity;
-
+  addCity(newCity: string) {
+    this.cities.push(newCity);
+  }
   constructor(private ws: WeatherService) {}
   ngOnInit() {}
 }
