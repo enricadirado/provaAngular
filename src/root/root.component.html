@@ -6,6 +6,6 @@
     <button (click)="seleziona(city)">{{ city }}</button>
   </li>
   <app-notifica [selezione]="selezione"> </app-notifica>
-  <app-newcity (newCityEvent)="addCity($event)"> </app-newcity>
+  <app-newcity (newCityEvent)="addCity($any($event))"> </app-newcity>
 </ul>
 

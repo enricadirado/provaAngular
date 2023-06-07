@@ -8,16 +8,14 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   standalone: true,
 })
-export class NewcityComponent implements OnInit {
-  @Output() newCityEvent = new EventsEmitter<string>();
+export class NewcityComponent implements OnInit {  
+  @Output() newCityEvent = new EventEmitter<string>();
   constructor() {}
   ngOnInit() {}
   newCity() {
-    var input: HTMLInputElement = document.getElementById(
-      'nuovo'
-    ) as HTMLInputElement;
+    var input: HTMLInputElement = document.getElementById("nuovo") as HTMLInputElement;
     var newName = input.value;
     this.newCityEvent.emit(newName);
-    input.value = '';
+    input.value='';
   }
 }
