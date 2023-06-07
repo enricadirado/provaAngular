@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TempCity } from './temp-city';
 import { WeatherService } from './weather.service';
 import { AjaxResponse } from 'rxjs/ajax';
+import { NotificaComponent } from './notifica/notifica.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { AjaxResponse } from 'rxjs/ajax';
 })
 export class RootComponent implements OnInit {
   title: string = 'Temperature in Angular ' + VERSION.major;
-  cities: Array<string> = ['Torino','Milano','Genova'];
+  cities: Array<string> = ['Torino', 'Milano', 'Genova'];
+
   seleziona(name: string) {
     this.selezione = new TempCity(name, undefined);
     this.ws.getData(this.selezione.nome).subscribe({
@@ -25,9 +27,7 @@ export class RootComponent implements OnInit {
     });
   }
   selezione: TempCity;
-  clean() {
-    this.selezione = undefined;
-  }
+
   constructor(private ws: WeatherService) {}
   ngOnInit() {}
 }
