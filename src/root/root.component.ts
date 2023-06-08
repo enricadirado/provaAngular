@@ -10,14 +10,13 @@ import { NewcityComponent } from './newcity/newcity.component';
   selector: 'app-root',
   templateUrl: './root.component.html',
   styleUrls: ['./root.component.css'],
-  imports: [ CommonModule, NotificaComponent ],
+  imports: [ CommonModule, NotificaComponent, NewcityComponent ],
   providers: [WeatherService],
   standalone: true,
 })
 export class RootComponent implements OnInit {
   title: string = 'Temperature in Angular ' + VERSION.major;
   cities: Array<string> = ['Torino', 'Milano', 'Genova'];
-
   seleziona(name: string) {
     this.selezione = new TempCity(name, undefined);
     this.ws.getData(this.selezione.nome).subscribe({
